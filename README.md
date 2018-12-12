@@ -1,6 +1,11 @@
 ### Group members:
 ***Harjot Nijjar, Matthias Lee***
 
+
+## Travis CI Status:
+[![Build Status](https://travis-ci.com/matthiaslmz/data533-lab4-MatthiasHarjot.svg?branch=master)](https://travis-ci.com/matthiaslmz/data533-lab4-MatthiasHarjot)  
+
+https://travis-ci.com/matthiaslmz/data533-lab4-MatthiasHarjot
 -------------
 ## OurBusiness (package)
 
