@@ -23,6 +23,11 @@ class TestTotalSales(unittest.TestCase):
         self.assertEqual(Sales.totalSales(), 13.17) 
         self.S2 = Sales.Sale('espresso',50.00,'11-30-2018',4,126)        
         self.assertEqual(Sales.totalSales(), 63.17) 
+        self.S2 = Sales.Sale('espresso',-1000.00,'11-30-2018', 5, 127)   
+        
+    def test_total_expenses_nonfloat(self):
+        self.S1 = Sales.Sale('rooibus tea latte',5,'11-28-2018',1,123)
+        self.assertEqual(Sales.totalSales(), None)
 		
     @classmethod
     def tearDownClass(cls):

@@ -17,7 +17,7 @@ class TestTotalExpenses(unittest.TestCase):
 
     def test_total_expenses(self):
         self.assertEqual(Expenses.totalExpenses(), 0)
-        self.EXP1 = Expenses.Expense('printer',69.69,'11-28-2018',1)
+        self.EXP1 = Expenses.Expense('printer', 69.69,'11-28-2018',1)
         self.assertEqual(Expenses.totalExpenses(), 69.69)        
         self.EXP2 = Expenses.Expense('dog',1750.00,'11-27-2018',2)
         self.assertEqual(Expenses.totalExpenses(), 1819.69)
@@ -25,7 +25,12 @@ class TestTotalExpenses(unittest.TestCase):
         self.assertEqual(Expenses.totalExpenses(), 1820.69)
         self.EXP4 = Expenses.Expense('plane',100.00,'11-29-2018',4)
         self.assertEqual(Expenses.totalExpenses(), 1920.69)
-
+        self.EXP5 = Expenses.Expense('boat',-2920.69,'11-30-2018',5)
+        self.assertEqual(Expenses.totalExpenses(), None)
+        
+    def test_total_expenses_nonfloat(self):
+        self.EXP1 = Expenses.Expense('printer', 69,'11-28-2018',1)
+        self.assertEqual(Expenses.totalExpenses(), None)
     
     @classmethod
     def tearDownClass(cls):
