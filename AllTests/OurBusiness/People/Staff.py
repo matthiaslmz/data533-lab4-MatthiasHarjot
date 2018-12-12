@@ -1,3 +1,10 @@
+class NonPositiveNumberError(Exception):
+    pass
+
+class NonIntegerError(Exception):
+    pass
+
+
 class Staff:
     def __init__(self, firstName, lastName, employeeID):
         self.firstName = firstName
@@ -18,7 +25,18 @@ class Manager(Staff):
         """
         Adds this shifts to the shifts of a Manager 
         """
-        self.shifts.append(shift)
+        try:
+            if shift <= 0:
+                raise NonPositiveNumberError()
+            elif type(shift) != int:
+                raise NonIntegerError()
+            self.shifts.append(shift)    
+            
+        except NonPositiveNumberError:
+            print("Shifts are non-negative integers starting from 1")
+        except NonIntegerError:
+            print("Shift must be an integer")
+        
         
 class OtherEmployee(Staff):
     def __init__(self, firstName, lastName, employeeID, managerID, shifts=[]):
