@@ -5,6 +5,12 @@
 ## Travis CI Status:
 [![Build Status](https://travis-ci.com/matthiaslmz/data533-lab4-MatthiasHarjot.svg?branch=master)](https://travis-ci.com/matthiaslmz/data533-lab4-MatthiasHarjot)  
 -------------
+## Path to functions with exceptions:
+OurBusiness -> People -> Staff -> addShift()
+OurBusiness -> Finances -> Sales -> totalSales()
+OurBusiness -> Finances -> Expenses -> totalExpenses()
+
+--------------
 ## OurBusiness (package)
 
 
