@@ -7,7 +7,9 @@
 -------------
 ## Path to functions with exceptions:
 OurBusiness -> People -> Staff -> addShift()
+
 OurBusiness -> Finances -> Sales -> totalSales()
+
 OurBusiness -> Finances -> Expenses -> totalExpenses()
 
 --------------
